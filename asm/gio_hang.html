@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="icon" href="../img/logo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giỏ hàng</title>
+    <link rel="stylesheet" href="../css/style_asm.css">
+    <style>
+        .thong_bao
+        {
+            background:#7a5531;
+            padding: 1rem;
+
+        }
+        .thong_bao td img
+        {
+            float: left;
+            width: 3.5rem;
+        }
+        .thong_bao td h1
+        {   
+            float: left;
+            font-size: 1.5rem;
+        }
+
+        table
+        {
+            width:100%;
+            padding: 1rem;
+            font-weight: 700;
+            border-collapse:collapse; 
+        }
+        th,td{
+            padding: 1rem;
+            font-size: 1.2rem;
+            border: 1px solid #333;
+        }        
+        .thong_bao td input
+        {
+            width: 100%;
+        }
+        caption{
+            font-weight: 900;
+            padding: 1rem;
+            font-size:2rem ;
+        }
+        .thong_bao  .center {
+            text-align: center;
+        }
+        .thong_bao td button {
+            margin: 0 auto;
+            padding: 0.5rem 1rem;
+            border-radius: .5rem;
+            display: flex;
+            transition: .5s ease-in-out;
+        }
+        .thong_bao td button:hover {
+            transform: translate(-2px,-2px);
+            box-shadow: 5px 5px 5px #222;
+        }
+        .thong_bao .tong_tien
+        {
+            padding: 1rem;
+        }
+        /* .thong_bao .tong_tien #tong
+        {
+            color: #0dc49c;
+        } */
+        table del 
+        {
+            color: #999;
+        }
+        .sub
+        {
+            margin: 0 auto;
+            padding: 0.5rem 1rem;
+            border-radius: .5rem;
+            text-decoration: none;
+            color: #111;
+            background-color: #fff;
+            width: 220px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: .5s ease-in-out;
+        }
+         .sub:hover
+        {
+            transform: translate(-5px,-5px);
+            box-shadow: 10px 10px 5px #222;
+        }
+        @media(max-width:960px)
+        {
+            .thong_bao td img
+            {
+                width: 3rem;
+            }
+            th,td 
+            {
+                font-size: 1rem;
+            }
+            .thong_bao td h1{
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header id="header">
+		<a href="#" class="Logo">
+			<img src="../img/logo.png">
+
+		</a>
+        <a href="../asm/gio_hang.html" class="cart">
+            <ion-icon name="cart-outline"></ion-icon>
+          
+        </a>
+        <a href="../asm/sub.html"class="cart">
+            <ion-icon name="person-circle-outline"></ion-icon>
+        </a>
+		<div id="toggle"></div>
+		<div id="navbar">
+			<ul>
+                <li><a href="../index.html">
+                    Trang chủ</a>
+                </li>
+				<li><a href="../asm/chi_tiet.html">Xem chi tiết</a></li>
+				<!-- <li><a href="#"></a></li>
+				<li><a href="#">FINAL ASM</a></li>
+				<li></li> -->
+			</ul>
+		</div>
+	</header>
+    <script src="../js/js_asm/menu.js"></script>
+
+    <div class="content">
+        <div class="text">
+            <h1>MẠNH CHƯA ĐỦ<br>PHẢI ĐÚNG <div class="hight-line-text">GU.</div></h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.<br>
+                Ab velit id veniam tenetur sequi neque, vero suscipit <br>
+                quasi hic animi quia, harum ullam dolorum qui, ea 
+                dolorem eos atque quisquam.</p>
+            <a href="#" class="btn"> 
+                <ion-icon name="cart-outline"></ion-icon>
+                <p>Mua ngay</p>
+            </a>
+        </div>
+           
+        <div class="main-img">
+            <div class="main-imgs active-img">
+                <span></span>
+                <img src="../img/img1.png" id="anh" alt="">
+         
+            </div>
+
+        </div>
+    </div>
+    <div class="footer-content">
+        <ul class="flo">
+            <li><a href=""><ion-icon name="logo-facebook"></ion-icon></a></li>
+            <li><a href=""><ion-icon name="mail-outline"></ion-icon></a></li>
+            <li><a href=""><ion-icon name="chatbubble-outline"></ion-icon></a></li>
+        </ul>
+    
+    </div>
+   
+    <script  src="../js/js_asm/slide_show.js"> </script>
+    
+    <main>
+		<section>
+            <div class="thong_bao">
+
+                <table>
+                    <caption>Giỏ hàng</caption>
+                    <thead>
+                        <tr>
+                            <th><input type="checkbox"  id="chonhet"></th>
+                            <th>Tên sản phẩm</th>
+                            <th>Giá</th>
+                            <th>Mua</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="checkbox" class="chon" checked onchange="daott(this)"></td>
+    
+                            <td> 
+                                <img src="../img/img1.png">
+                                <h1>Cafe sửa đá</h1>  
+                            </td>
+                            <td class="center">20000</td>
+                            <td><button onclick="them(this);tinh_tong();">Chọn</button></td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" class="chon" checked onchange="daott(this)"></td>
+                            <td>
+                                <img src="../img/img2.png">
+                                <h1>
+                                    Cafe đá
+                                </h1>
+                            </td>
+                            <td class="center"> 15000 </td>
+                            <td><button onclick="them(this);tinh_tong();">Chọn</button></td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" class="chon" checked onchange="daott(this)"></td>
+                            <td>
+                                <img src="../img/img3.png">
+                                <h1>Trà chanh</h1>
+                            </td>
+                            <td class="center">10000<br><del>15000</del></td>
+                            <td><button onclick="them(this);tinh_tong();">Chọn</button></td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" class="chon" checked onchange="daott(this)"></td>
+                            <td>
+                                <img src="../img/img4.png">
+                                <h1>Cafe kem matcha</h1>
+                            </td>
+                            <td class="center">25000<br><del>30000</del></td>
+                            <td><button onclick="them(this);tinh_tong();">Chọn</button></td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" class="chon" checked onchange="daott(this)"></td>
+                            <td>
+                                <img src="../img/270_crop_.png">
+                                <h1>Cafe sữa kem</h1>
+                            </td>
+                            <td class="center">25000<br><del>30000</del></td>
+                            <td><button onclick="them(this);tinh_tong();">Chọn</button></td>
+                        </tr>
+
+                        <tr>
+                            <td><input type="checkbox" class="chon" checked onchange="daott(this)"></td>
+                            <td>
+                                <img src="../img/cach-lam-tra-thach-dao-highland-1-.png">
+                                <h1>Trà thạch đào</h1>
+                            </td>
+                            <td class="center">15000</td>
+                            <td><button onclick="them(this);tinh_tong();">Chọn</button></td>
+    
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" class="chon" checked onchange="daott(this)"></td>
+                            <td>
+                                <img src="../img/phindi_kem_sua_new.png">
+                                <h1>Cafe sữa kem</h1>
+                            </td>
+                            <td class="center">25000<br><del>30000</del></td>
+                            <td><button onclick="them(this);tinh_tong();">Chọn</button></td>
+    
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" class="chon" checked onchange="daott(this)"></td>
+                            <td>
+                                <img src="../img/CHOCOLATE-FREEZE.png">
+                                <h1>Cafe kem Chocolate</h1>
+                            </td>
+                            <td class="center">30000<br><del>50000</del></td>
+                            <td><button onclick="them(this);tinh_tong();">Chọn</button></td>
+    
+                        </tr>
+                      
+                    </tbody>
+                </table>
+                <hr style="margin:20px 0" />
+                <table id="cart">
+                    <caption>GIỎ HÀNG CỦA BẠN</caption>
+                </table>
+                <h2 class="tong_tien">TỔNG SỐ TIỀN CỦA BẠN LÀ: <span id="tong">0</span></h2>
+                <a class="sub" href="sub.html">Tiến hành đặc hàng</a>
+            </div>
+        </section>
+        <script src="../js/js_asm/asm_1.js"></script>
+        <script src="../js/js_asm/cart.js"></script>
+    </main>
+    <footer>
+        <p> Được thiết kế bởi Đặng Minh Tài &copy; 2022 </p>
+    </footer>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

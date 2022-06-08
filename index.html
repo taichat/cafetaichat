@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="icon" href="./img/logo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang chủ</title>
+    <link rel="stylesheet" href="./css/style_asm.css">
+    
+</head>
+
+<body>
+    
+    <header id="header">
+		<a href="#" class="Logo">
+			<img src="./img/logo.png">
+
+		</a>
+        <a href="./asm/gio_hang.html" class="cart">
+            <ion-icon name="cart-outline"></ion-icon>
+           
+        </a>
+        <a href="./asm/sub.html"class="cart">
+            <ion-icon name="person-circle-outline"></ion-icon>
+        </a>
+		<div id="toggle"></div>
+		<div id="navbar">
+			<ul>
+                <li><a href="index.html">
+                    Trang chủ</a>
+                </li>
+				<li><a href="./asm/chi_tiet.html">Xem chi tiết</a></li>
+				<!-- <li><a href="#"></a></li>
+				<li><a href="#">FINAL ASM</a></li>
+				<li></li> -->
+			</ul>
+		</div>
+	</header>
+    <script src="./js/js_asm/menu.js"></script>
+
+    <div class="content">
+        <div class="text">
+            <h1>MẠNH CHƯA ĐỦ<br>PHẢI ĐÚNG <div class="hight-line-text">GU.</div></h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.<br>
+                Ab velit id veniam tenetur sequi neque, vero suscipit <br>
+                quasi hic animi quia, harum ullam dolorum qui, ea 
+                dolorem eos atque quisquam.</p>
+            <a href="#" class="btn"> 
+                <ion-icon name="cart-outline"></ion-icon>
+                <p>Mua ngay</p>
+            </a>
+        </div>
+           
+        <div class="main-img">
+            <div class="main-imgs active-img">
+                <span></span>
+                <img src="./img/img1.png" id="anh" alt="">
+         
+            </div>
+
+        </div>
+    </div>
+    <div class="footer-content">
+        <ul class="flo">
+            <li><a href=""><ion-icon name="logo-facebook"></ion-icon></a></li>
+            <li><a href=""><ion-icon name="mail-outline"></ion-icon></a></li>
+            <li><a href=""><ion-icon name="chatbubble-outline"></ion-icon></a></li>
+        </ul>
+    
+    </div>
+   
+    <script> 
+    let khoAnh = [];
+        const nAnh = 5;
+        let index = 1;
+
+        for (let i = 1; i <= nAnh; i++) {
+            khoAnh[i] = new Image();
+            khoAnh[i].src = `./img/img${i}.png`;
+        }
+        function previous() {
+            index--;
+            if (index < 1) {
+                index = nAnh - 1;
+            }
+            document.getElementById("anh").src = khoAnh[index].src;
+        }
+        function next() {
+            index++;
+            if (index >= nAnh) {
+                index = 1;
+            }
+            document.getElementById("anh").src = khoAnh[index].src;
+
+        }
+        setInterval("next();",2500);
+    </script>
+    
+    <main>
+		<section>
+            <div class="ThucDon" id="ThucDon">
+            
+                    <h1>Thực đơn chính</h1>
+                    <div class="card"data-aos="fade-up">
+                        <div class="imgBx">
+                            <img src="./img/img1.png">
+                            <p class="hot">HOT</p>
+                        </div>
+                        <div class="ChiTiet">
+                            <h2>Cafe sửa đá</h2>
+                            <p>Giá 20k <sup>vnđ</sup></p></li>
+                            <a href="./asm/chi_tiet.html"> Đặt ngay</a>
+                            
+                        </div>
+                    </div>
+                    <div class="card"data-aos="fade-up">
+                        <div class="imgBx">
+                            <img src="./img/img2.png">
+                            <p class="hot">HOT</p>
+                        </div>
+                        <div class="ChiTiet">
+                            <h2>Cafe đá</h2>
+                            <p>Giá 15k <sup>vnđ</sup></p></li>
+                            <a href="./asm/chi_tiet.html"> Đặt ngay</a>
+                            
+                        </div>
+                    </div>
+                    <div class="card"data-aos="fade-up">
+                        <div class="imgBx">
+                            <img src="./img/img3.png">
+                            <p class="hot">HOT</p>
+                        </div>
+                        <div class="ChiTiet">
+                            <h2>Trà chanh</h2>
+                            <p>Giá 10k <sup>vnđ</sup></p></li>
+                            <a href="./asm/chi_tiet.html"> Đặt ngay</a>
+                            
+                        </div>
+                    </div>
+                    <div class="card"data-aos="fade-up">
+                        <div class="imgBx">
+                            <img src="./img/img4.png">
+                            <p class="new">NEW</p>
+                        </div>
+                        <div class="ChiTiet">
+                            <h2>Cafe kem matcha</h2>
+                            <p>Giá 25k <sup>vnđ</sup></p></li>
+                            <a href="./asm/chi_tiet.html"> Đặt ngay</a>
+                            
+                        </div>
+                    </div>
+        
+        
+                    <div class="card"data-aos="fade-up">
+                        <div class="imgBx">
+                            <img src="./img/270_crop_.png">
+                            <p class="new">NEW</p>
+                        </div>
+                        <div class="ChiTiet">
+                            <h2>Cafe sữa kem</h2>
+                            <p>Giá 25k <sup>vnđ</sup></p></li>
+                            <a href="./asm/chi_tiet.html"> Đặt ngay</a>
+                        </div>
+                    </div>
+                    <div class="card"data-aos="fade-up">
+                        <div class="imgBx">
+                            <img src="./img/cach-lam-tra-thach-dao-highland-1-.png">
+                            <p class="hot">HOT</p>
+                        </div>
+                        <div class="ChiTiet">
+                            <h2>Trà thạch đào</h2>
+                            <p>Giá 15k <sup>vnđ</sup></p></li>
+                            <a href="./asm/chi_tiet.html"> Đặt ngay</a>
+                        </div>
+                    </div>
+                    <div class="card"data-aos="fade-up">
+                        <div class="imgBx">
+                            <img src="./img/CHOCOLATE-FREEZE.png">
+                            <p class="new">NEW</p>
+                        </div>
+                        <div class="ChiTiet">
+                            <h2>Cafe kem Chocolate</h2>
+                            <p>Giá 30k <sup>vnđ</sup></p></li>
+                            <a href="./asm/chi_tiet.html"> Đặt ngay</a>
+                        </div>
+                    </div>
+                    <div class="card"data-aos="fade-up">
+                        <div class="imgBx">
+                            <img src="./img/phindi_kem_sua_new.png">
+                        </div>
+                        <div class="ChiTiet">
+                            <h2>Cafe nhiều sữa</h2>
+                            <p>Giá 25k <sup>vnđ</sup></p></li>
+                            <a href="./asm/chi_tiet.html"> Đặt ngay</a>
+                        </div>
+                    </div>
+            </div>
+        </section>
+        <script src="./js/js_asm/asm_1.js"></script>
+        <script src="./js/js_asm/cart.js"></script>
+    </main>
+    <footer>
+        <p> Được thiết kế bởi Đặng Minh Tài &copy; 2022 </p>
+    </footer>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

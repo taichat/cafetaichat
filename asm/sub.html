@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="icon" href="../img/logo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <title>Đăng ký</title>
+    <link rel="stylesheet" href="../css/style_asm.css">
+    <style>
+        section form 
+        {
+            position: relative;
+            margin: 0 auto;
+            background-color: #eeeeee;
+            box-shadow: 1rem 1rem 0  #222;
+            padding: 2rem;
+            border-radius: 0.7rem;
+            border: 1px solid  #222;
+            z-index: 2;
+        }
+
+        section h4
+        {
+            position: relative;
+            background-color: #b0000b;
+            color: #fff;
+            padding: 1rem;
+            margin: 0 auto;
+            margin-bottom: -0.8rem;
+            border-radius: 0.7rem  0.7rem 0 0  ;
+            box-shadow: 1rem 1rem 0  #222;
+            z-index: 1;
+        }
+    
+    </style>
+</head>
+
+<body>
+    <header id="header">
+		<a href="#" class="Logo">
+			<img src="../img/logo.png">
+
+		</a>
+        <a href="../asm/gio_hang.html" class="cart">
+            <ion-icon name="cart-outline"></ion-icon>
+        
+        </a>
+        <a href="../asm/sub.html"class="cart">
+            <ion-icon name="person-circle-outline"></ion-icon>
+        </a>
+		<div id="toggle"></div>
+		<div id="navbar">
+			<ul>
+                <li><a href="../index.html">
+                    Trang chủ</a>
+                </li>
+				<li><a href="../asm/chi_tiet.html">Xem chi tiết</a></li>
+				<!-- <li><a href="#"></a></li>
+				<li><a href="#">FINAL ASM</a></li>
+				<li></li> -->
+			</ul>
+		</div>
+	</header>
+    <script src="../js/js_asm/menu.js"></script>
+    <div class="content">
+        <div class="text">
+            <h1>MẠNH CHƯA ĐỦ<br>PHẢI ĐÚNG <div class="hight-line-text">GU.</div></h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.<br>
+                Ab velit id veniam tenetur sequi neque, vero suscipit <br>
+                quasi hic animi quia, harum ullam dolorum qui, ea 
+                dolorem eos atque quisquam.</p>
+            <a href="#" class="btn"> 
+                <ion-icon name="cart-outline"></ion-icon>
+                <p>Mua ngay</p>
+            </a>
+        </div>
+           
+        <div class="main-img">
+            <div class="main-imgs active-img">
+                <span></span>
+                <img src="../img/img1.png" id="anh" alt="">
+         
+            </div>
+
+        </div>
+    </div>
+    <div class="footer-content">
+        <ul class="flo">
+            <li><a href=""><ion-icon name="logo-facebook"></ion-icon></a></li>
+            <li><a href=""><ion-icon name="mail-outline"></ion-icon></a></li>
+            <li><a href=""><ion-icon name="chatbubble-outline"></ion-icon></a></li>
+        </ul>
+    
+    </div>
+   
+    <script  src="../js/js_asm/slide_show.js"> </script>
+    
+    
+    <main>
+        <section>
+            
+            <h4 class="col-4 col-xl-2 text-center">ĐĂNG KÝ</h4>
+            <form action="#" name="register" method="GET" onsubmit="return formRegister();" class="sub col-sm-12 col-md-10 col-lg-5">
+               
+                <div class="form-group">
+                    <label  class="text-primary">Họ và tên: </label><input type="text" name="lastName" value="" placeholder="Nhập họ tên"
+                    class="form-control">
+                </div>
+                <div class="form-group">
+                    <label class="text-primary">Giới tính: </label><br>
+                    <fieldset class="border border-secondary p-3">
+                        <input type="radio" value="Nam" name="gender"><label > &nbsp; Nam</label> &nbsp; 
+                        <input type="radio" value="Nữ"  name="gender"><label > &nbsp; Nữ</label>
+                    </fieldset>
+                </div>
+
+                <div class="form-group">
+                    <label  class="text-primary">Số điện thoại: </label>
+                    <input type="number" name="cellphone" value="" placeholder="Nhập SĐT" class="form-control bg-warning">
+                </div>
+                <div class="form-group">
+                    <label  class="text-primary" > Tỉnh</label>
+                    <select name="tinh" class="form-control">
+                        <option value="0">Chọn tỉnh</option>
+                        <option value="1">TPHCM</option>
+                        <option value="2">Hà nội</option>
+                        <option value="3">Cần Thơ</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="text-primary">Sở thích: </label><br>
+                    <fieldset class="border border-secondary p-3">
+                        <input type="checkbox" name="hobby" value="Đọc sách"><label>&nbsp;Đọc sách</label>&nbsp;
+                        <input type="checkbox" name="hobby" value="Đá bóng"><label>&nbsp;Đá bóng</label>&nbsp;
+                        <input type="checkbox" name="hobby" value="Xem phim"><label>&nbsp;Xem phim</label>&nbsp;
+                        <input type="checkbox" name="hobby" value="Nghe nhạc"><label>&nbsp;Nghe nhạc</label>&nbsp;
+                        <input type="checkbox" name="hobby" value="May vá"><label>&nbsp;May vá</label>&nbsp;
+                        <input type="checkbox" name="hobby" value="khác"><label>&nbsp;Khác</label>
+                    </fieldset>
+                </div>
+                <div class="form-group">
+                    <label class="text-primary">Món uống yêu thích: </label><br>
+                    <fieldset class="border border-secondary p-3">
+                        <input type="checkbox" name="hobby_2" value="Cafe đá"><label>&nbsp;Cafe đá</label>&nbsp;
+                        <input type="checkbox" name="hobby_2" value="Cafe sữa đá"><label>&nbsp;Cafe sữa đá</label>&nbsp;
+                        <input type="checkbox" name="hobby_2" value="Trà đào"><label>&nbsp;Trà đào</label>&nbsp;
+                        <input type="checkbox" name="hobby_2" value="Trà chanh"><label>&nbsp;Trà chanh</label>&nbsp;
+                        <input type="checkbox" name="hobby_2" value="Cafe kem matcha"><label>&nbsp;Cafe kem matcha</label>&nbsp;
+                        <input type="checkbox" name="hobby_2" value="khác"><label>&nbsp;Khác</label>
+                    </fieldset>
+                </div>
+                <div class="form-group">
+                    <label  class="text-info"> Thông tin bổ sung</label>
+                    <textarea name="bosung" class="form-control bg-warning" rows="4" placeholder="Bổ sung thêm thông tin cá nhân"></textarea>
+                </div>
+                <div id="message"></div>
+                <div class="form-group">
+                    <input type="submit" name="submit" class="btn m-auto col-5" value="Đặng ký">
+                </div>
+                <div id="registerInfor"></div>
+                <div id="registerInfor_2"></div>
+            </form>
+            
+        </section>
+        <script src="../js/js_asm/asm_1.js"></script>
+        <script src="../js/js_asm/cart.js"></script>
+        <script src="../js/js_asm/sub.js"></script>
+    </main>
+    <footer>
+        <p> Được thiết kế bởi Đặng Minh Tài &copy; 2022 </p>
+    </footer>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
