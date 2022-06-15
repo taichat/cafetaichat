@@ -19,6 +19,7 @@
             padding: 2rem;
             border-radius: 0.7rem;
             border: 1px solid  #222;
+            margin-bottom: 1rem;
             z-index: 2;
         }
 
@@ -70,58 +71,82 @@
     
     <main>
         <section>
-            
-            <h4 class="col-4 col-xl-2 text-center">ĐĂNG KÝ</h4>
-            <form action="#" name="register" method="GET" onsubmit="return formRegister();" class="sub col-sm-12 col-md-10 col-lg-5">
-               
-                <div class="form-group">
-                    <label  class="text-primary">Họ và tên: </label><input type="text" name="lastName" value="" placeholder="Nhập họ tên"
-                    class="form-control">
-                </div>
-                <div class="form-group">
-                    <label class="text-primary">Giới tính: </label><br>
-                    <fieldset class="border border-secondary p-3">
-                        <input type="radio" value="Nam" name="gender"><label > &nbsp; Nam</label> &nbsp; 
-                        <input type="radio" value="Nữ"  name="gender"><label > &nbsp; Nữ</label>
-                    </fieldset>
-                </div>
+                                        <!-- ĐĂNG KÝ -->
+            <div id="dangKy">
+                <h4 class="col-4 col-xl-2 text-center">ĐĂNG KÝ</h4>
+                <form action="#" name="register" method="GET" onsubmit="return formRegister();" class="sub col-sm-12 col-md-10 col-lg-5">
+                
+                    <div class="form-group">
+                        <label >Họ và tên: </label><input type="text" name="lastName" value="" placeholder="Nhập họ tên"
+                        class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label >Mật khẩu: </label><input type="password" name="password" value="" placeholder="Nhập mật khẩu"
+                        class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label >Giới tính: </label><br>
+                        <fieldset class="border border-secondary p-3">
+                            <input type="radio" value="Nam" name="gender"><label > &nbsp; Nam</label> &nbsp; 
+                            <input type="radio" value="Nữ"  name="gender"><label > &nbsp; Nữ</label>
+                        </fieldset>
+                    </div>
 
-                <div class="form-group">
-                    <label  class="text-primary">Số điện thoại: </label>
-                    <input type="number" name="cellphone" value="" placeholder="Nhập SĐT" class="form-control bg-warning">
-                </div>
-                <div class="form-group">
-                    <label  class="text-primary" > Tỉnh</label>
-                    <select name="tinh" class="form-control">
-                        <option value="0">Chọn tỉnh</option>
-                        <option value="1">TPHCM</option>
-                        <option value="2">Hà nội</option>
-                        <option value="3">Cần Thơ</option>
-                    </select>
-                </div>
-              
-                <div class="form-group">
-                    <label class="text-primary">Món uống yêu thích: </label><br>
-                    <fieldset class="border border-secondary p-3">
-                        <input type="checkbox" name="hobby_2" value="Cafe đá"><label>&nbsp;Cafe đá</label>&nbsp;
-                        <input type="checkbox" name="hobby_2" value="Cafe sữa đá"><label>&nbsp;Cafe sữa đá</label>&nbsp;
-                        <input type="checkbox" name="hobby_2" value="Trà đào"><label>&nbsp;Trà đào</label>&nbsp;
-                        <input type="checkbox" name="hobby_2" value="Trà chanh"><label>&nbsp;Trà chanh</label>&nbsp;
-                        <input type="checkbox" name="hobby_2" value="Cafe kem matcha"><label>&nbsp;Cafe kem matcha</label>&nbsp;
-                        <input type="checkbox" name="hobby_2" value="khác"><label>&nbsp;Khác</label>
-                    </fieldset>
-                </div>
-                <div class="form-group">
-                    <label  class="text-info"> Thông tin bổ sung</label>
-                    <textarea name="bosung" class="form-control bg-warning" rows="4" placeholder="Bổ sung thêm thông tin cá nhân"></textarea>
-                </div>
-                <div id="message"></div>
-                <div class="form-group">
-                    <input type="submit" name="submit" class="btn m-auto col-5" value="Đăng ký">
-                </div>
-                <div id="registerInfor"></div>
-                <div id="registerInfor_2"></div>
-            </form>
+                    <div class="form-group">
+                        <label >Số điện thoại: </label>
+                        <input type="number" name="cellphone" value="" placeholder="Nhập SĐT" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label   > Tỉnh</label>
+                        <select name="tinh" class="form-control">
+                            <option value="0">Chọn tỉnh</option>
+                            <option value="1">TPHCM</option>
+                            <option value="2">Hà nội</option>
+                            <option value="3">Cần Thơ</option>
+                        </select>
+                    </div>
+                
+                    <div class="form-group">
+                        <label > Thông tin bổ sung</label>
+                        <textarea name="bosung" class="form-control" rows="4" placeholder="Bổ sung thêm thông tin cá nhân"></textarea>
+                    </div>
+                    <div id="message"></div>
+                    <div class="form-group">
+                        <a  onclick="dang_nhap()"class="text-primary">Tôi đã có tài khoản</a>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="submit" name="submit" class="btn m-auto col-5" value="Đăng ký">
+                    </div>
+                    
+                    <div id="registerInfor_2"></div>
+                </form>
+            </div>
+
+
+            <div id="dangNhap" class="an_form">
+                                                     <!-- ĐĂNG NHẬP -->
+                <h4 class="col-4 col-xl-2 text-center">ĐĂNG NHẬP</h4>
+                <form action="#" name="formSign" method="GET" onsubmit="return formSign();" class="sub col-sm-12 col-md-10 col-lg-5">
+                
+                    <div class="form-group">
+                        <label >Họ và tên: </label><input type="text" name="lastName" value="" placeholder="Nhập họ tên"
+                        class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label >Mật khẩu: </label><input type="password" name="password" value="" placeholder="Nhập mật khẩu"
+                        class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <a onclick="dang_ky()" class="text-primary">Tôi chưa có tài khoản</a>
+                    </div>
+                    <div id="message"></div>
+                    <div class="form-group">
+                        <input type="submit" name="submit" class="btn m-auto col-5" value="Đăng nhập">
+                    </div>
+                </form>
+            </div>
             
         </section>
         <script src="../js/js_asm/asm_1.js"></script>

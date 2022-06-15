@@ -1,11 +1,20 @@
 function formRegister(){
     // hợp lệ họ
     let txt_ho  = document.forms["register"]["lastName"];
+    let pass  = document.forms["register"]["password"];
     let msg =  document.getElementById("message");
     msg.style.color = "#b0000b";
     msg.style.fontStyle = "Italic";
     if(txt_ho.value == ""){
         msg.innerText = "Họ không được để trống.";
+        return false;
+    }
+    else
+    {
+        msg.innerText= "";
+    }
+    if(pass.value == ""){
+        msg.innerText = "Mật khẩu bạn không được để trống.";
         return false;
     }
     else
@@ -60,32 +69,7 @@ function formRegister(){
             fValid = true;
         }
     }
-    
-    
-
-    // hợp lệ Món uống yêu thích
-    let hobbyArr_2 = document.forms["register"]["hobby_2"];
-    let l = 0 ;
-    let kq_2= "Món uống yêu thích đã chọn: ";
-    while(l<hobbyArr_2.length){
-        if(hobbyArr_2[l].checked == true){
-            break;
-        }
-        l++    
-    }
-    if(l == hobbyArr_2.length)
-    {
-        msg.innerText = "Món uống yêu thích phải được chọn ít nhất 1 cái.";
-        return false;
-    }
-    for(let l in hobbyArr_2){
-        if(hobbyArr_2[l].checked == true){
-
-            kq_2 += hobbyArr_2[l].value + "\t";
-            msg.innerText+= "";
-        }
-    }
-    document.getElementById("registerInfor_2").innerText=kq_2;
+        
     if(msg.innerText==""){
         setTimeout(() => {
             window.location = "../index.html"
@@ -94,3 +78,44 @@ function formRegister(){
     return false;
 
 }
+
+// button 
+
+function dang_nhap() {
+    var dangKy = document.getElementById("dangKy");
+    dangKy.classList.add("an_form");
+    var dangNhap = document.getElementById("dangNhap");
+    dangNhap.classList.remove("an_form");
+ }
+ 
+ function dang_ky() {
+    var dangKy = document.getElementById("dangKy");
+    dangKy.classList.remove("an_form");
+    var dangNhap = document.getElementById("dangNhap");
+    dangNhap.classList.add("an_form");
+ }
+
+
+ function formSign(){
+    let txt_ho  = document.forms["formSign"]["lastName"];
+    let pass  = document.forms["formSign"]["password"];
+    let msg =  document.getElementById("message");
+    if(txt_ho.value == "admin"&& pass.value=="123")
+    {
+        alert("Đăng nhập thành công !");
+        msg.innerText= "";
+        return false;
+    }
+    else
+    {
+        msg.style.color="#b0000d";
+        msg.innerText= "Tài khoản học mật khẩu bạn không đúng";
+    }
+
+    if(msg.innerText==""){
+        setTimeout(() => {
+            window.location = "../index.html"
+        }, 1500);
+    }
+    return false;
+ }

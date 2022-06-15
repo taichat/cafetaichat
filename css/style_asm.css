@@ -46,7 +46,7 @@ h1
   position: relative;
   padding: 1rem;
   margin: 1rem 0;
-  background-color: #368349;
+  background-color: #007064;
   color: #fff;
   font-size: 1.5rem;
   border-radius: 1rem;
@@ -648,3 +648,11 @@ footer p {
   font-size: 1rem;
 }
 
+
+.an_form{
+  display: none;
+}
+.form-group a
+{
+  cursor: pointer;
+}
