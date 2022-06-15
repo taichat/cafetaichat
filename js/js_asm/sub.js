@@ -14,8 +14,8 @@ function formRegister(){
     }
     // hợp lệ bổ sung
     let bo_sung = document.forms["register"]["bosung"];
-    if(bo_sung.value<10 || bo_sung.value>1000){
-        msg.innerText ="Hãy nhập thông tin bổ sung từ 10 đến 1000 ký tự";
+    if(bo_sung.value<0 || bo_sung.value>1000){
+        msg.innerText ="Thông tin bổ sung chỉ đến 1000 ký tự";
         return false;
     }
     else 
@@ -61,30 +61,7 @@ function formRegister(){
         }
     }
     
-    // hợp lệ sở thích
-
-    let hobbyArr = document.forms["register"]["hobby"];
-    let i = 0 ;
-    let kq= "Sở thích đã chọn: ";
-    while(i<hobbyArr.length){
-        if(hobbyArr[i].checked == true){
-            break;
-        }
-        i++    
-    }
-    if(i == hobbyArr.length)
-    {
-        msg.innerText = "Sở thích phải được chọn ít nhất 1 cái.";
-        return false;
-    }
-    for(let i in hobbyArr){
-        if(hobbyArr[i].checked == true){
-
-            kq += hobbyArr[i].value + "\t";
-            msg.innerText+= "";
-        }
-    }
-    document.getElementById("registerInfor").innerText=kq;
+    
 
     // hợp lệ Món uống yêu thích
     let hobbyArr_2 = document.forms["register"]["hobby_2"];

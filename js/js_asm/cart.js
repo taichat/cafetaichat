@@ -6,6 +6,7 @@ function them(button)
     btn_xoa.setAttribute('onclick','xoa(this)');
     document.getElementById("cart").appendChild(row);
     document.getElementById("cart").style.display="";   
+    alert("Đã thêm 1 sản phẩm vào giỏ hàng");
 }
 function xoa(button) {
     var row = button.parentElement.parentElement;
@@ -21,6 +22,7 @@ function xoa(button) {
         tong = tong+price;
     }
     document.getElementById("tong").innerText = tong;
+    alert("Đã xóa 1 sản phẩm khỏi giỏ hàng");
 }
 function tinh_tong(){
     var cart = document.getElementById("cart");
@@ -32,7 +34,8 @@ function tinh_tong(){
         price= parseInt(price);
         tong += price;
     }
-    document.getElementById("tong").innerText = tong;
+    document.getElementById("tong").innerText = tong+ " đ";
+    document.getElementById("tong").style.color = "#89C699";
 
 }
 
